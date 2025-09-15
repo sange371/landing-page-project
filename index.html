@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(68.6deg,rgb(252,165,241)1.8%,rgb(181,255,255)100.5%);
+        }
+        h1{
+            text-align: center;
+            color:black;
+            text-decoration: underline;
+            font-family:system-ui;
+            font-weight: 500;
+        }
+        h2{
+            text-align: center;
+            color:black;
+            border:1px solid #d59bf6;
+            padding:20px;
+            font-size: 14px;
+            border-radius:10px;
+            font-family:sans-serif;
+            font-weight: 400;
+        }
+        img{
+            display:block;
+            margin:0 auto;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+        p{
+            font-size: small;
+            font-family:sans-serif;
+            font-weight: 400;
+            color:black;
+            line-height: 20px;
+        }
+        .find-out-more{
+            display:center;
+            margin-top:10px;
+            text-decoration:none;
+            font-size:14px;
+        }
+        .find-out-more:hover{
+            text-decoration:underline;
+        }
+        button{
+            display:block;
+            margin:20px auto;
+            color:black;
+            background:white;
+            font-size:14px;
+            padding:15px 30px;
+            border:1px solid rgb(124, 187, 255);
+            border-radius:15px;
+            box-shadow:5px 5px 10px rgb(124, 187, 255);
+            transition:200ms all ease-in-out;
+        }
+        button:hover{
+            cursor:pointer;
+            background:rgb(254, 201, 247);
+        }
+        .all{
+            max-width:500px;
+            margin:0 auto;
+            padding:20px 40px;
+        }
+        hr{
+            border-color:#d59bf6;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1>
+            Skin Care
+        </h1>
+        <h2>
+            Take care of your skin!
+        </h2>
+        <hr/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Skin_care_cosmetics.jpg"alt="skin care products" width="300">
+        <hr/>
+        <p>
+           <span>Skin Care or skincare is the practice of maintaining and improving the health and appearance of the skin.</span>
+           <span>It includes washing,moisturizing,protecting from the sun and treating skin problems like acne and dryness.</span>
+           <span>Skin care can help prevent infections and irritation and is an important part of the daily hygiene.</span>
+        </p>
+        <br/>
+        <a href="https://en.wikipedia.org/wiki/Skin_care" target="_blank" class="find-out-more">
+            Find out more on wikipedia
+        </a>
+        <br/>
+        <button class="buy-skincare">
+            Choose your skincare products
+        </button>
+    </div>
+    <script>
+        function choose() {
+            let name=prompt("What is your name?");
+            let skinCare=prompt("Do you want a skincare product?enter 'yes' or 'no': ");
+
+            if (skinCare==="yes"){
+                let email=prompt("What is your email address?");
+                alert("Thank you "+name+" ,we'll be in touch with you via email for further proceedings");
+            }else{
+                alert("Thank you "+name+" ,have a lovely day further!")
+            }
+        }
+        let chooseButton=document.querySelector(".buy-skincare");
+        chooseButton.addEventListener("click",choose);
+    </script>
+</body>
+</html>
